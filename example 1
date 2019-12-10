@@ -1,0 +1,18 @@
+#include "stdafx.h"
+#include <iostream>
+using namespace std;
+
+int main()
+{
+	int value1 = 5, value2 = 15;
+	int * mypointer; // declaring pointer variable
+
+	mypointer = &value1; //initialising pointer variable by assigning the address of value1 to mypointer 
+	*mypointer = 10; //10 is assigned at value 1 which is pointed by mypointer
+	mypointer = &value2; //assigns the addess of value2 to mypointer which refers to the same address as value2
+	*mypointer = 20;
+	cout << "value1 =" << value1 << "  value2 =" << value2 << endl;
+
+	return 0;
+}
+
