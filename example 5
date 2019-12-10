@@ -1,0 +1,30 @@
+#include <iostream>
+#define BIL_UJIAN 5
+using namespace std;
+
+struct ujian
+{
+	int nogiliran;
+	int markah[BIL_UJIAN];
+};
+void main()
+{
+	int i, jumlah = 0;
+	struct ujian pelajar;
+
+	cout << " masukkan nombor giliran pelajar : ";
+	cin >> pelajar.nogiliran;
+
+	for (i = 0; i < BIL_UJIAN; i++)
+	{
+		cout << endl << "masukkan markah ujian ke " << i + 1;
+		cout << "  ";
+		cin >> pelajar.markah[i];
+		jumlah = jumlah + pelajar.markah[i];
+	}
+	cout << endl << "Nombor giliran pelajar : ";
+	cout << pelajar.nogiliran;
+	cout << endl << "purata markah : " << jumlah / BIL_UJIAN;
+	cout << endl;
+
+}
